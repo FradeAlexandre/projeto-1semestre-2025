@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 //import org.springframework.web.bind.annotation.RequestParam;
 
 
+
 @RestController
 public class ExercicioController {
  
@@ -45,5 +46,22 @@ public class ExercicioController {
 
     }
 
-    
+    @GetMapping("/get-num/{num}")
+    public String getMethodNum(@PathVariable Integer num) {
+        try {
+            if(num < 0){
+                throw new NumberFormatException();
+            }
+             if(num % 2 == 0){
+                return "Num é par";
+             }
+             else if (num % 2 !=0 ){
+                return "Num é impar";
+             }
+
+        } catch (NumberFormatException e) {
+        return " Invalido";
+    }
+            return null;
+}
 }
