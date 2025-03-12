@@ -14,7 +14,7 @@ public class ClienteController {
     //http://localhost:8080/api/cliente/criarCliente => POST
     @PostMapping("/criarCliente")
     public String criarCliente(@RequestBody Cliente cliente){
-        return "O Cliente"+cliente.getNome()+ " de idade"+cliente.getIdade()+" Foi Criado";
+        return "O Cliente"+cliente.getNome()+ " de idade"+cliente.getIdade()+ "Endereco"+cliente.getEndereco()+ " Foi Criado";
     }
 
 
