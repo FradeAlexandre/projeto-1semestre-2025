@@ -1,17 +1,17 @@
 package com.fatec.projeto.projeto2025.entites;
 
 public class Cliente {
-    private int id;
+    private Long id;
     private String nome;
     private int idade;
     private String endereco;
 
     public Cliente() {
     }
-    public int getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getNome() {
